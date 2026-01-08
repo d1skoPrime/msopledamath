@@ -269,6 +269,9 @@ export default function TeacherPage() {
 					/>
 				</div>
 			</div>
+			<h1 className="w-full mt-6 text-lg text-muted-foreground hover:text-foreground transition-colors flex items-center justify-center gap-2 group">
+				Made by Roman R.
+			</h1>
 		</div>
 	)
 }

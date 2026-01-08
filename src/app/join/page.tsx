@@ -187,6 +187,9 @@ export default function JoinPage() {
 					Teacher Dashboard
 					<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
 				</button>
+				<h1 className="w-full mt-6 text-lg text-muted-foreground hover:text-foreground transition-colors flex items-center justify-center gap-2 group">
+					Made by Roman R.
+				</h1>
 			</div>
 		</div>
 	)
