@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "mathqueue-b66b2"
+  },
+  "targets": {
+    "mathqueue-b66b2": {
+      "hosting": {
+        "msopledamath": [
+          "msopledamath"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

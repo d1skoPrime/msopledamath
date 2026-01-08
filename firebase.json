@@ -1,0 +1,18 @@
+{
+	"hosting": {
+		"site": "msopledamath",
+		"public": ".next",
+		"cleanUrls": true,
+		"rewrites": [
+			{
+				"source": "**",
+				"function": "nextjsFunc"
+			}
+		],
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	},
+	"functions": {
+		"source": "functions",
+		"runtime": "nodejs18"
+	}
+}

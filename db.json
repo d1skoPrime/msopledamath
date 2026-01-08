@@ -1,0 +1,19 @@
+{
+	"rules": {
+		".read": "auth != null",
+		".write": "auth != null",
+		"classes": {
+			"$period": {
+				".read": true,
+				".write": "auth != null",
+				"queue": {
+					"$item": {
+						".read": true,
+						".validate": "newData.hasChildren(['groupName', 'createdAt']) && newData.child('groupName').isString() && newData.child('groupName').val().length > 0",
+						".write": "auth != null || !data.exists()"
+					}
+				}
+			}
+		}
+	}
+}

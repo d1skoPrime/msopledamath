@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Classroom Help Queue System
 
-## Getting Started
+A real-time classroom help queue built with Next.js, TypeScript, Tailwind CSS,
+and Firebase.
 
-First, run the development server:
+## Setup Instructions
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Firebase Setup
+
+1. Create a Firebase project at https://console.firebase.google.com
+2. Enable Firestore Database
+3. Enable Authentication (Email/Password)
+4. Copy your Firebase config to `.env.local`
+
+### 3. Create Teacher Account
+
+In Firebase Console → Authentication → Add User:
+
+- Email: teacher@school.edu
+- Password: your_secure_password
+
+### 4. Deploy Firestore Rules
+
+Copy the rules from `firestore.rules` to your Firebase Console → Firestore →
+Rules
+
+### 5. Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Student page: http://localhost:3000/join
+- Teacher page: http://localhost:3000/teacher
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+app/
+├── join/page.tsx          # Student join page
+├── teacher/page.tsx       # Teacher dashboard
+├── layout.tsx             # Root layout
+└── page.tsx               # Redirect to join
 
-To learn more about Next.js, take a look at the following resources:
+components/
+├── PeriodSelector.tsx     # Period dropdown component
+├── ErrorAlert.tsx         # Error message component
+├── QueuePosition.tsx      # Student position display
+└── QueueList.tsx          # Teacher queue list
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+lib/
+├── firebase.ts            # Firebase initialization
+├── firestore.ts           # Firestore operations
+├── types.ts               # TypeScript types
+└── utils.ts               # Utility functions
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+✅ Real-time queue updates ✅ Period-based isolation ✅ Code verification ✅
+FIFO ordering ✅ Teacher authentication ✅ Mobile-responsive ✅
+Projector-friendly teacher view
