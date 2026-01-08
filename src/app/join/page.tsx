@@ -145,7 +145,7 @@ export default function JoinPage() {
 									type="text"
 									value={groupName}
 									onChange={e => setGroupName(e.target.value)}
-									placeholder="Enter your group name (One name of any person in your group)"
+									placeholder="Enter your group name (Enter the name of one person from your group)"
 									className="w-full px-4 py-3.5 rounded-xl border border-border bg-background/50 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-chart-1 focus:border-transparent outline-none transition-all"
 								/>
 							</div>
